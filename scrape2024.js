@@ -21,7 +21,8 @@ const scrapeData = async (branch, city, stnumber) => {
       fullName: $('div.info-row:contains("الاسم الكامل") div:last-child')
         .text()
         .trim(),
-      province: $('div.info-row:contains("المحافظة") div:last-child')
+      city: $('div.info-row:contains("المحافظة") div:last-child').text().trim(),
+      school: $('div.info-row:contains("المدرسة") div:last-child')
         .text()
         .trim(),
       result: $('div.info-row:contains("النتيجة") div:last-child')

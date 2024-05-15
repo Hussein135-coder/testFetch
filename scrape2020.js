@@ -10,14 +10,18 @@ const scrapeData = async (branch, city, stnumber) => {
 
     // Extract student information
     const result = {
-      registrationNumber: $(".a-row:nth-child(1) .a-cell:nth-child(2).number")
+      examNumber: $('div.a-row:contains("رقم الاكتتاب") div:last-child')
         .text()
         .trim(),
-      governorate: $(".a-row:nth-child(2) .a-cell:nth-child(2)").text().trim(),
-      fullName: $(".a-row:nth-child(3) .a-cell:nth-child(2)").text().trim(),
-      motherName: $(".a-row:nth-child(4) .a-cell:nth-child(2)").text().trim(),
-      school: $(".a-row:nth-child(5) .a-cell:nth-child(2)").text().trim(),
-      result: $(".a-row:nth-child(6) .a-cell:nth-child(2)").text().trim(),
+      motherName: $('div.a-row:contains("اسم الأم") div:last-child')
+        .text()
+        .trim(),
+      fullName: $('div.a-row:contains("الاسم الكامل") div:last-child')
+        .text()
+        .trim(),
+      city: $('div.a-row:contains("المحافظة") div:last-child').text().trim(),
+      school: $('div.a-row:contains("المدرسة") div:last-child').text().trim(),
+      result: $('div.a-row:contains("النتيجة") div:last-child').text().trim(),
       subjects: [],
     };
 
