@@ -8,7 +8,7 @@ const fetchUrl = async (url) => {
     return "Error";
   }
 };
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+// process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 async function routes(fastify, options) {
   fastify.post("/fetchurl", async (request, reply) => {
     const url = request.body.url;
