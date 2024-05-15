@@ -1,0 +1,14 @@
+{
+  "name": "nodejs",
+  "module": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "express": "^4.19.2",
+    "fastify": "^4.27.0",
+    "nodemon": "^3.1.0"
+  }
+}
