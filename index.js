@@ -1,5 +1,8 @@
 import Fastify from "fastify";
 import fetchUrl from "./fetchUrl.js";
+import scrape2024 from "./scrape2024.js";
+import scrape2020 from "./scrape2020.js";
+
 const fastify = Fastify({
   logger: true,
 });
@@ -20,3 +23,5 @@ const start = async () => {
 start();
 
 fastify.register(fetchUrl);
+fastify.register(scrape2024);
+fastify.register(scrape2020);
