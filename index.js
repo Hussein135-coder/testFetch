@@ -20,12 +20,3 @@ const start = async () => {
 start();
 
 fastify.register(fetchUrl);
-
-// app.get("/", async (req, res) => {
-//   const html = await fetchUrl("https://2024.moed.gov.sy/interlude/");
-//   res.json({ html });
-// });
-
-// app.listen(port, () => {
-//   console.log(`Listening on port ${port}...`);
-// });
